@@ -1,0 +1,379 @@
+/* ==========================================================================
+   1. RESET E VARIÁVEIS GLOBAIS (Box Model e Paleta de Cores - Aula 6)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não alterem a largura final dos elementos */
+}
+
+:root {
+    --cor-primaria: #0056b3;      /* Azul institucional / destaque */
+    --cor-secundaria: #003366;    /* Azul escuro para títulos */
+    --cor-fundo-claro: #f8f9fa;   /* Fundo cinza suave */
+    --cor-texto: #333333;         /* Texto principal */
+    --cor-texto-suave: #666666;   /* Subtítulos e descrições */
+    --cor-erro: #d9534f;          /* Vermelho para validação do formulário */
+    --cor-sucesso: #28a745;       /* Verde para mensagem de envio */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicao-padrao: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Navegação suave ao clicar nos links da barra de menu */
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.titulo-secao::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (Header Fixado)
+   ========================================================================== */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+}
+
+.nav a:hover {
+    color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   3. SEÇÃO SOBRE MIM (Flexbox Layout)
+   ========================================================================== */
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover;
+    border: 4px solid var(--cor-primaria);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-texto h2 {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+
+.sobre-texto h3 {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    color: var(--cor-texto-suave);
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-secundaria);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: var(--transicao-padrao);
+}
+
+.redes-sociais a:hover {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   4. SEÇÃO PORTFÓLIO (CSS Grid Layout e Cards de Projetos)
+   ========================================================================== */
+.portfolio {
+    background-color: var(--cor-fundo-claro);
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-projeto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: var(--transicao-padrao);
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-corpo {
+    padding: 20px;
+}
+
+.card-corpo h3 {
+    font-size: 1.3rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.card-corpo p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 15px;
+}
+
+.btn-link {
+    display: inline-block;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+}
+
+.btn-link:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ==========================================================================
+   5. SEÇÃO SKILLS (Barras de Progresso Gráficas)
+   ========================================================================== */
+.skills-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progresso {
+    height: 100%;
+    background-color: var(--cor-primaria);
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+/* Porcentagens baseadas no currículo e nas skills */
+.progresso.html-css { width: 75%; }
+.progresso.js       { width: 60%; }
+.progresso.csharp   { width: 65%; }
+.progresso.git      { width: 70%; }
+
+/* ==========================================================================
+   6. SEÇÃO CONTATO (Formulário e Mapa de Localização Macro)
+   ========================================================================== */
+.contato {
+    background-color: var(--cor-fundo-claro);
+}
+
+.grid-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mapa-container h3, .form-container h3 {
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+/* Formatação do Iframe do Mapa */
+.mapa-container iframe {
+    width: 100%;
+    height: 320px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.grupo-form {
+    margin-bottom: 15px;
+}
+
+.grupo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.grupo-form input,
+.grupo-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transicao-padrao);
+}
+
+.grupo-form input:focus,
+.grupo-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicao-padrao);
+}
+
+.btn-submit:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.status-envio {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ==========================================================================
+   7. RODAPÉ E MEDIA QUERIES (Responsividade para Celular - Aula 5)
+   ========================================================================== */
+.footer {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+
+    .grid-contato {
+        grid-template-columns: 1fr; /* Transforma o layout em coluna única no mobile */
+    }
+}
