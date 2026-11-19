@@ -328,6 +328,14 @@ body {
     text-align: center;
 }
 
+.status-envio.sucesso {
+    color: var(--cor-sucesso);
+}
+
+.status-envio.erro {
+    color: var(--cor-erro);
+}
+
 .footer {
     background-color: var(--cor-secundaria);
     color: #ffffff;
