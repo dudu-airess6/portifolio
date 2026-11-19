@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Seleção dos elementos do DOM
     const formContato = document.getElementById("formContato");
     const inputNome = document.getElementById("nome");
     const inputEmail = document.getElementById("email");
@@ -17,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function validarFormulario() {
         let ehValido = true;
-
-        // Limpa mensagens de erro anteriores
         erroNome.textContent = "";
         erroEmail.textContent = "";
         erroMensagem.textContent = "";
@@ -53,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     formContato.addEventListener("submit", function (e) {
-        e.preventDefault(); // Impede o recarregamento automático da página
+        e.preventDefault(); 
 
         if (validarFormulario()) {
             statusEnvio.textContent = "Mensagem enviada com sucesso! Obrigado pelo contato.";
