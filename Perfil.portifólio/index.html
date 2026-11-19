@@ -7,16 +7,13 @@
     <meta name="author" content="Eduardo Gabriel Santos Aires">
     <title>Eduardo Aires | Portfólio Pessoal</title>
 
-    <!-- Folha de Estilos Externa -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     
-    <!-- Ícones (Font Awesome para redes sociais) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="js/script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Cabeçalho e Navegação -->
     <header class="header">
         <div class="container">
             <h1 class="logo"><a href="#">Eduardo Aires</a></h1>
@@ -31,7 +28,6 @@
         </div>
     </header>
 
-    <!-- Seção Sobre Mim -->
     <section id="sobre" class="section sobre">
         <div class="container sobre-content">
             <div class="sobre-img">
@@ -42,7 +38,7 @@
                 <h3>Eduardo Gabriel Santos Aires</h3>
                 <p>
                     Olá! Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> na Universidade Tiradentes (UNIT - Aracaju) 
-                    e de <strong>Informática para Internet</strong>.
+                    com curso técnico de <strong>Informática para Internet</strong>.
                 </p>
                 <p>
                     Busco oportunidades de estágio na área de Tecnologia da Informação para aplicar e expandir meus conhecimentos 
@@ -57,29 +53,35 @@
         </div>
     </section>
 
-    <!-- Seção Portfólio (Projetos) -->
     <section id="portfolio" class="section portfolio">
         <div class="container">
             <h2 class="titulo-secao">Portfólio</h2>
             <div class="grid-projetos">
-                
-                <!-- Card Projeto 1 -->
+
                 <article class="card-projeto">
-                    <img src="assets/img/TelaPerfilExato.png" alt="Prévia do projeto PerfilExato">
+                    <img src="/assets/img/Calculadora.png" alt="Prévia do projeto Calculadora">
                     <div class="card-corpo">
                         <h3>PerfilExato</h3>
                         <p>Sistema desenvolvido utilizando C# e a plataforma .NET focado em estruturação lógica e orientação a objetos.</p>
-                        <a href="https://github.com/dudu-airess6/PerfilExato" target="_blank" class="btn-link">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Projects/Calculadora/index.html" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </article>
 
-                <!-- Card Projeto 2 -->
                 <article class="card-projeto">
-                    <img src="assets/img/telaAcad.png" alt="Prévia do projeto LDL Fitness">
+                    <img src="/assets/img/ListaTarefas.png" alt="Prévia do projeto Lista de Tarefas">
                     <div class="card-corpo">
                         <h3>LDL Fitness</h3>
                         <p>Website responsivo para academia desenvolvido com HTML, CSS e JavaScript focado em experiência do usuário.</p>
-                        <a href="https://github.com/dudu-airess6/site-academia" target="_blank" class="btn-link">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                        <a href="/Projects/lista de Tarefas/index.html" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </article>
+
+                <article class="card-projeto">
+                    <img src="/assets/img/Lâmpada.png" alt="Prévia do projeto Lâmpada">
+                    <div class="card-corpo">
+                        <h3>LDL Fitness</h3>
+                        <p>Website responsivo para academia desenvolvido com HTML, CSS e JavaScript focado em experiência do usuário.</p>
+                        <a href="/Projects/Lâmpada/index.html" target="_blank" class="btn-link">Ver Projeto <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </article>
 
@@ -129,16 +131,13 @@
         </div>
     </section>
 
-    <!-- Seção Contato -->
     <section id="contato" class="section contato">
         <div class="container">
             <h2 class="titulo-secao">Contato</h2>
             
             <div class="grid-contato">
-                <!-- Informações de Contato Direto e Mapa -->
                 <div class="info-e-mapa">
                     
-                    <!-- Card com Dados do Currículo -->
                     <div class="card-info-contato">
                         <h3>Canais Diretos</h3>
                         <p><i class="fas fa-map-marker-alt"></i> <strong>Localização:</strong> Estância - SE, Brasil</p>
@@ -147,7 +146,6 @@
                         <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/_dud.airess?srtk=MWt2eTNlN3ZkY29sbg%3D%3D&utm_source=qr" target="_blank">@_dudu.airess</a></p>
                     </div>
 
-                    <!-- Container do Mapa Macro -->
                     <div class="mapa-container">
                         <h3>Localização no Mapa</h3>
                         <iframe 
@@ -162,7 +160,6 @@
                     </div>
                 </div>
 
-                <!-- Formulário de Contato com Validação JS -->
                 <div class="form-container">
                     <h3>Envie uma Mensagem</h3>
                     <form id="formContato" novalidate>
@@ -192,14 +189,10 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
             <p>Eduardo Gabriel Santos Aires &copy; 2026. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Script de Interatividade e Validação -->
-    
 </body>
 </html>
